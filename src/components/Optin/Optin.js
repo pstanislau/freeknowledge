@@ -21,6 +21,9 @@ class Optin extends Component {
             </div>
           </div>
         </div>
+        <br />
+        <br />
+        <p>Workers of the world, unite!  ☭</p>
       </div>
     );
   }
