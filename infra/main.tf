@@ -15,5 +15,6 @@ terraform {
   #   [with] -backend-config="backend.json"
   #     [or] -backend-config="backend.tfvars"
   #     [or] -backend-config="<key>=<value>"
-  backend "s3" {}
+  backend "s3" {
+  }
 }

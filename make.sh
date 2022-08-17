@@ -6,7 +6,7 @@
 
 # AWS variables
 AWS_PROFILE=default
-AWS_REGION=usa-east-1
+AWS_REGION=us-east-1
 # project name
 PROJECT_NAME=free-knowledge
 # apex domain name

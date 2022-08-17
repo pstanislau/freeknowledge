@@ -1,7 +1,7 @@
 resource aws_s3_bucket bucket {
   bucket        = "www.${var.apex_domain}"
   force_destroy = true
-  acl           = "public-read"
+  acl           = "private"
 
   website {
     index_document = "index.html"
