@@ -40,25 +40,6 @@ usage() {
       or invoke this file directly: ./make.sh dev'
 }
 
-# local dev on http://localhost:1313
-dev() {
-    hugo server \
-		--buildDrafts \
-		--disableFastRender
-}
-
-# local dev without the drafts
-dev-nodraft() {
-    hugo server
-}
-
-# build static site to ./public
-build() {
-    rm public \
-		--force \
-		--recursive
-	hugo
-}
 
 upload() {
     cd "$dir/public"
