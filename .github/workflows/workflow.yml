@@ -9,6 +9,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Installing dependencies
+        run: npm install
+    - name: Building project
+        run: npm run build
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
