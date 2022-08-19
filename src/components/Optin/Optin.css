@@ -18,6 +18,34 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.social_media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social_media a {
+  background-color: var(--color-bg-variant);
+  color: var(--color-white);
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  display: flex;
+  border: 1px solid transparent;
+}
+
+.social_media a:hover {
+  background: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+}
+
+copyright {
+  margin-bottom: 4rem;
+  font-family: "SFmono";
+  letter-spacing: 0.1em;
+  color: var(--color-light-gray);
+}
 #modal {
   position: fixed;
   top: 100px;
