@@ -8,15 +8,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [15.x]
     steps:
-    -name: build-stage
-    - uses: actions/checkout@v1
-      - run: npm install
-      - run: npm run build 
-      
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 15
+      - name: Build
+        run: |
+          npm ci
+          npm run build
     -name: deploy-stage 
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
