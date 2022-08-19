@@ -31,30 +31,6 @@ class Optin extends Component {
             </div>
           </div>
         </div>
-        <br />
-        <br />
-        <div className="social_media">
-        <a href={"https://github.com/pstanislau"}>
-          <FaGithub />
-        </a>
-        <a
-          href={"https://www.instagram.com/pedrostanislau/"}>
-          <FaInstagram />
-        </a>
-        <a href={"https://twitter.com/pedrostanislau"}>
-          <FaTwitter />
-        </a>
-        <a
-          href={"https://facebook.com/pstanislau"}>
-          <FaFacebookSquare />
-        </a>
-        <a href={"https://linktr.ee/pstanislau"}>
-          <SiLinktree />
-        </a>
-      </div>
-      <div className="copyright">
-        <small>&copy; Tropa do Sábio. All rights reserved. 🧠</small>
-      </div>
       </div>
     );
   }
