@@ -1,16 +1,5 @@
 import React, { Component } from "react";
 import "./Optin.css";
-
-import {
-  FaFacebookSquare,
-  FaInstagram,
-  FaGithub,
-  FaTwitter,
-} from "react-icons/fa";
-import { SiLinktree } from "react-icons/si";
-
-
-
 class Optin extends Component {
   modal() {
     const modal = document.getElementById("modal");
