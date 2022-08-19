@@ -12,9 +12,12 @@ jobs:
       matrix:
         node-version: [15.x]
     steps:
+    -name: build-stage
     - uses: actions/checkout@v1
       - run: npm install
-      - run: npm run build  
+      - run: npm run build 
+      
+    -name: deploy-stage 
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
       with:
