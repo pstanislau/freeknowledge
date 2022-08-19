@@ -57,8 +57,7 @@ copyright {
   z-index: 99999;
   opacity: 0;
 }
-#modal.is_open {
-}
+
 #modal .wrapper {
   color: #444;
   text-align: center;

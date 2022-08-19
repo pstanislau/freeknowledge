@@ -1,1 +1,1 @@
-S3_BACKEND=free-knowledge-bnam
+S3_BACKEND=free-knowledge-fesz

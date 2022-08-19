@@ -29,7 +29,7 @@ jobs:
         cd build
         aws s3 sync \
           --delete \
-          . s3://www.freeknowledge.com
+          . s3://stanis-freeknowledge.com
 
      - name: Cloudfront invalidation
       run: |

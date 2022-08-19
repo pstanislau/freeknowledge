@@ -68,16 +68,8 @@ create-user() {
         --query 'AccessKey.{AccessKeyId:AccessKeyId,SecretAccessKey:SecretAccessKey}' \
         --profile $AWS_PROFILE \
         2>/dev/null)
-
-    AWS_ACCESS_KEY_ID=$(echo "$key" | jq '.AccessKeyId' --raw-output)
-    log AWS_ACCESS_KEY_ID $AWS_ACCESS_KEY_ID
-    
-    AWS_SECRET_ACCESS_KEY=$(echo "$key" | jq '.SecretAccessKey' --raw-output)
-    log AWS_SECRET_ACCESS_KEY $AWS_SECRET_ACCESS_KEY
-
     cat > "$dir/secrets.sh" << EOF
-AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+AWS_ACCESS_IDS=$key
 EOF
 }
 
