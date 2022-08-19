@@ -30,10 +30,11 @@ jobs:
         aws s3 sync \
           --delete \
           . s3://www.freeknowledge.com
-          
+
      - name: Cloudfront invalidation
       run: |
         aws cloudfront create-invalidation \
           --distribution-id ${{ secrets.DISTRIBUTION_ID }} \
-          --paths "/*" 
+          --paths "/" \
+          "/*" 
 
