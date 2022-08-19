@@ -5,12 +5,27 @@ on:
     branches:
     - main
 
+
 jobs:
-  deploy:
+  build:
+
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
         node-version: [15.x]
+
     steps:
-      - uses: actions/checkout@v1
-      run: npm install && npm run build && aws s3 sync build/ s3://stanis-freeknowledge.tech
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: sync s3
+      run: aws s3 sync build/ s3://stanis-freeknowledge.tech
