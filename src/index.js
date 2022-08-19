@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>
-          THE WORLD BIGGEST FREE LEARNING PROGRAM
+          THE WORLD BIGGEST FREE LEARNING PROGRAM!
           <br />
           <br />
           Coming Soon
