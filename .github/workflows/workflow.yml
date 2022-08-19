@@ -8,5 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [15.x]
     steps:
+      - uses: actions/checkout@v1
       run: npm install && npm run build && aws s3 sync build/ s3://stanis-freeknowledge.tech
